@@ -7,43 +7,54 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.css">
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
 </head>
 
-<body>
+<body class="bg-white dark:bg-black text-black dark:text-white">
+
+    <button id="dark-light" class="px-5 fixed p-5"><i class="fa-regular fa-sun fa-xl "></i></button>
 
     <div class="div1 flex justify-between items-center w-[80%] m-auto py-12">
         <nav class="flex items-center gap-20">
             <img src="./Group 31.svg" alt="">
-            <ul class="flex gap-10 text-[20px] font-medium text-gray-500">
+            <ul class="lg:flex hidden gap-10 text-[20px] font-medium text-gray-500">
                 <li><a class="text-black" href="">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Works</a></li>
                 <li><a href="">Blog</a></li>
             </ul>
         </nav>
-        <button class="i p-6 bg-white shadow-2xl rounded-full">
+        <button class="i p-6 bg-white dark:bg-[#2b2b2b] shadow-2xl rounded-full">
             <i class="fa-solid fa-bars fa-xl"></i>
         </button>
     </div>
 
-    <div class="div2 flex w-4/5 m-auto mb-40">
-        <div class="text w-2/4 py-10">
+    <div class="div2 lg:flex w-4/5 m-auto mb-40">
+        <div class="text lg:w-2/4 py-10">
             <p class="text-[24px] text-gray-500 font-medium">Hello,</p>
-            <p class="text-[60px] text-black font-bold"> Adam Zakob</p>
+            <p class="lg:text-[60px] text-[32px]  font-bold"> Adam Zakob</p>
             <p class="text-[24px] py-5">a freelance UX Designer</p>
             <button class="text-[24px] text-white px-12 py-2 bg-[#8643DC] rounded-full my-12">Let’s Talk</button>
         </div>
-        <img class="absolute top-[40px] right-[250px]" src="./user-image 1.svg" alt="">
+        <img class="lg:absolute top-[40px] right-[250px]" src="./user-image 1.svg" alt="">
     </div>
 
     <div class="div3 w-4/5 m-auto">
         <span class="text-[18px] text-[#8643DC] border-b-4 border-[#8643DC] pb-2">Services</span>
         <p class="text-[32px] font-bold py-5">What actually <br> I love to do</p>
-        <div class="div flex">
+        <div class="div flex lg:flex-row flex-col">
             <div class="d1">
                 <div class="img flex items-center gap-10 py-8">
                     <img src="./Group 3 (2).svg" alt="">
-                    <p class="text-[24px] font-medium text-[#25202F]">UX Research</p>
+                    <p class="text-[24px] font-medium">UX Research</p>
                 </div>
                 <p class="text-[16px] text-gray-500">New demos are continually added and buying a single license for Mak
                     gives you access to all of
@@ -53,7 +64,7 @@
             <div class="d1">
                 <div class="img flex items-center gap-10 py-8">
                     <img src="./Group 3 (1).svg" alt="">
-                    <p class="text-[24px] font-medium text-[#25202F]">Brand Design</p>
+                    <p class="text-[24px] font-medium">Brand Design</p>
                 </div>
                 <p class="text-[16px] text-gray-500">New demos are continually added and buying a single license for Mak
                     gives you access to all of
@@ -63,7 +74,7 @@
             <div class="d1">
                 <div class="img flex items-center gap-10 py-8">
                     <img src="./Group 3.svg" alt="">
-                    <p class="text-[24px] font-medium text-[#25202F]">Web Development</p>
+                    <p class="text-[24px] font-medium">Web Development</p>
                 </div>
                 <p class="text-[16px] text-gray-500">New demos are continually added and buying a single license for Mak
                     gives you access to all of
@@ -79,11 +90,11 @@
                 <span class="text-[18px] text-[#8643DC] border-b-4 border-[#8643DC] pb-2">Portfolio</span>
                 <p class="text-[32px] font-bold py-5">All Creative <br> Projects</p>
             </div>
-            <p class="text-[24px] text-[#25202F] border-b border-[#25202F]">
+            <p class="lg:text-[24px] text-[14px] border-b border">
                 Explore More <i class="fa-solid fa-arrow-right  text-[#8643DC]"></i>
             </p>
         </div>
-        <div class="di flex w-4/5 m-auto py-10  ">
+        <div class="di flex lg:flex-row flex-col w-4/5 m-auto lg:py-10 py-2 ">
             <img width="540px" src="./Rectangle 5.svg" alt="">
             <img width="540px" src="./Rectangle 6.svg" alt="">
         </div>
@@ -92,12 +103,12 @@
     <div class="div5 w-4/5 m-auto py-5">
         <span class="text-[18px] text-[#8643DC] border-b-4 border-[#8643DC] pb-2">Clients</span>
         <p class="text-[32px] font-bold py-5">Big Deal <br> With</p>
-        <div class="img flex  m-auto">
-            <img class="w-[240px]" src="./Group 14.svg" alt="">
-            <img class="w-[240px]" src="./Group 13.svg" alt="">
-            <img class="w-[240px]" src="./Group 12.svg" alt="">
-            <img class="w-[240px]" src="./Group 11.svg" alt="">
-            <img class="w-[240px]" src="./Group 10.svg" alt="">
+        <div class="img flex lg:flex-row lg:flex-nowrap flex-wrap m-auto">
+            <img class="lg:w-[240px] w-[140px]" src="./Group 14.svg" alt="">
+            <img class="lg:w-[240px] w-[140px]" src="./Group 13.svg" alt="">
+            <img class="lg:w-[240px] w-[140px]" src="./Group 12.svg" alt="">
+            <img class="lg:w-[240px] w-[140px]" src="./Group 11.svg" alt="">
+            <img class="lg:w-[240px] w-[140px]" src="./Group 10.svg" alt="">
         </div>
     </div>
 
@@ -109,7 +120,7 @@
             <div class="py-10">
                 <div class="div flex justify-between items-center">
                     <img src="./Mask Group.png" alt="">
-                    <div class="div w-2/4 flex flex-col justify-center items-center">
+                    <div class="div w-2/4   flex flex-col justify-center items-center">
                         <img width="42px" src="./206058 1.png" alt="">
                         <p class="text-[16px] text-gray-500 text-center">Quote testimonials demonstrate support for your
                             product or feature from a user who has
@@ -120,7 +131,7 @@
                     <img src="./Mask Group (3).png" alt="">
                 </div>
 
-                <div class="d2 w-4/5 m-auto flex items-center justify-between py-10">
+                <div class="d2 lg:w-4/5 w-full m-auto flex items-center justify-between py-10">
                     <img src="./Mask Group (1).png" alt="">
                     <div class="d">
                         <img src="./Group 16.png" alt="">
@@ -134,7 +145,7 @@
         </div>
     </div>
 
-    <div class="div7 w-4/5 m-auto flex justify-between">
+    <div class="div7 w-4/5 m-auto flex lg:flex-row flex-col justify-between lg:gap-0 gap-10">
         <div>
             <span class="text-[18px] text-[#8643DC] border-b-4 border-[#8643DC] pb-2">Blog</span>
             <p class="text-[32px] font-bold py-5">Get News <br> Feeds</p>
@@ -162,12 +173,13 @@
         </div>
     </div>
 
-    <div class="div8 w-full h-[802px] py-20"
+    <div class="div8 w-full h-[902px] py-20 "
         style="background-image: url(./Rectangle\ 18.png); background-position: 100%; background-size: 100%;">
         <div class="d w-4/5 m-auto">
             <span class="text-[18px] text-[#8643DC] border-b-4 border-[#8643DC] pb-2">Contact Me</span>
-            <div class="flex justify-between">
-                <p class="text-[32px] font-bold py-5 w-2/4">Let me know if you want to talk
+            <div class="lg:flex justify-between">
+                <p class="lg:text-[32px] text-[20px] font-bold py-5 lg:w-2/4 w-auto">
+                    Let me know if you want to talk
                     about a potential collaboration.
                     I'm available for freelance work.
                 </p>
@@ -175,7 +187,7 @@
                     <p class="text-[24px] text-[#8643DC] border-b border-[#8643DC]">infoname@mail.com</p>
                 </div>
             </div>
-            <form class="w-full" action="">
+            <form class="w-full py-20" action="">
                 <input style="outline: none; background-color: inherit;" 
                 class="py-5 placeholder:text-[20px]" type="text" placeholder="What’s your name?">
                 <br><hr>
@@ -204,6 +216,36 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const toggleButton = document.getElementById('dark-light');
+        const icon = toggleButton.querySelector('i');
+
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        } else {
+            document.documentElement.classList.remove('dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+
 
 </body>
 
