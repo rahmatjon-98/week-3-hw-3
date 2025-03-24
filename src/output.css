@@ -575,13 +575,17 @@ video {
   margin-bottom: 3rem;
 }
 
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-40 {
   margin-bottom: 10rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -592,24 +596,36 @@ video {
   height: 130vh;
 }
 
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
 .h-\[350px\] {
   height: 350px;
 }
 
 .h-full {
   height: 100%;
+}
+
+.h-\[902px\] {
+  height: 902px;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
+.h-\[10px\] {
+  height: 10px;
+}
+
+.h-\[1px\] {
+  height: 1px;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[802px\] {
+  height: 802px;
 }
 
 .w-2\/4 {
@@ -624,28 +640,24 @@ video {
   width: 240px;
 }
 
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .w-\[255px\] {
   width: 255px;
 }
 
-.w-auto {
-  width: auto;
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .w-full {
   width: 100%;
 }
 
-.flex-col {
-  flex-direction: column;
+.w-2 {
+  width: 0.5rem;
 }
 
-.items-end {
-  align-items: flex-end;
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -670,6 +682,22 @@ video {
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .rounded-full {
@@ -704,12 +732,20 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.p-6 {
-  padding: 1.5rem;
+.bg-current {
+  background-color: currentColor;
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-12 {
@@ -752,6 +788,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -792,6 +833,10 @@ video {
   font-size: 60px;
 }
 
+.text-\[36px\] {
+  font-size: 36px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -825,8 +870,32 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\] {
+  color: ;
+}
+
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.placeholder\:text-\[24px\]::-moz-placeholder {
+  font-size: 24px;
+}
+
+.placeholder\:text-\[24px\]::placeholder {
+  font-size: 24px;
+}
+
+.placeholder\:text-\[20px\]::-moz-placeholder {
+  font-size: 20px;
+}
+
+.placeholder\:text-\[20px\]::placeholder {
+  font-size: 20px;
 }
